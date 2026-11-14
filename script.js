@@ -67,7 +67,13 @@ function setupListeners() {
 function switchTheme(skipSave) {
   currentTheme = currentTheme === 'light' ? 'dark' : 'light';
   applyTheme(currentTheme);
-  if (!skipSave) localStorage.setItem('theme', currentTheme);
+  if (!skipSave) {
+    try {
+      localStorage.setItem('theme', currentTheme);
+    } catch (error) {
+      console.warn('Theme preference could not be saved:', error);
+    }
+  }
 }
 
 function applyTheme(theme, init = false) {
@@ -211,10 +217,6 @@ function handleKeyShortcuts(e) {
   if (e.key === ' ' && document.activeElement === document.body) {
     e.preventDefault();
     toggleMusic();
-  }
-  if ((e.ctrlKey || e.metaKey) && (e.key === 't' || e.key === 'T')) {
-    e.preventDefault();
-    switchTheme();
   }
 }
 
