@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Houtarou Oreki - Tribute</title>
+  <link rel="icon" href="images/Hyouka_logo.svg.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="header-content">
+      <a href="#home" class="logo">
+        <img src="images/Hyouka_logo.svg.png" alt="Hyouka Logo" class="logo-img">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#media" class="nav-link">Media</a></li>
+          <li><a href="#watch" class="nav-link">Watch</a></li>
+          <li><button id="theme-toggle" class="icon-btn" title="Toggle Theme"><span id="theme-icon" class="material-symbols-outlined">dark_mode</span></button></li>
+          <li><button id="music-toggle" class="icon-btn" title="Toggle Music"><span id="music-icon" class="material-symbols-outlined">volume_up</span></button></li>
+        </ul>
+      </nav>
+      <button id="mobile-menu-btn" class="mobile-menu-btn"><span></span><span></span><span></span></button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#media" class="mobile-nav-link">Media</a>
+      <a href="#watch" class="mobile-nav-link">Watch</a>
+      <button id="theme-toggle-mobile" class="icon-btn" title="Toggle Theme"><span id="theme-icon-mobile" class="material-symbols-outlined">dark_mode</span></button>
+      <button id="music-toggle-mobile" class="icon-btn" title="Toggle Music"><span id="music-icon-mobile" class="material-symbols-outlined">volume_up</span></button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background" style="background-image: url('images/hero.png')">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="hero-title-main">Houtarou Oreki</span>
+          <span class="hero-title-sub">The Energy-Conserving Detective</span>
+        </h1>
+        <p class="hero-quote">"I don't do anything I don't have to. What I have to do, I do quickly."</p>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-number">2012</span><span class="stat-label">Debut Year</span></div>
+        <div class="stat"><span class="stat-number">22</span><span class="stat-label">Episodes</span></div>
+        <div class="stat"><span class="stat-number">8.1</span><span class="stat-label">MAL Score</span></div>
+      </div>
+    </div>
+    <div class="scroll-indicator"><div class="scroll-arrow"></div></div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Houtarou</h2>
+        <p class="section-subtitle">The reluctant genius of the Classics Club</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-video">
+          <video autoplay muted loop playsinline preload="auto">
+            <source src="video/Oreki Houtarou Twixtor Clips - Payynuz (1080p, h264).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="vi-content">
+          <h3>The Lazy Detective</h3>
+          <p class="about-text">
+            Houtarou Oreki is a quiet, highly intelligent student at Kamiyama High School. 
+            He follows a strict energy conservation philosophy: avoid doing anything unnecessary.
+          </p>
+          <p class="about-text">
+            However, when he joins the Classics Club at the request of his sister, Oreki finds 
+            himself drawn into solving mysteries especially those sparked by the endlessly curious Chitanda Eru.
+          </p>
+
+          <div class="features">
+            <!-- Genius Mind -->
+            <div class="feature">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                  <path d="M12 2a7 7 0 00-7 7c0 2.21 1.79 4 4 4h.35a3.65 3.65 0 01.65 7.26v1.24a1 1 0 102 0v-1.26a4.65 4.65 0 01.64-9.24H15a5 5 0 000-10h-1a7 7 0 00-2 .28A7.002 7.002 0 0012 2z" />
+                </svg>
+              </div>
+              <div class="feature-content">
+                <h4>Genius Mind</h4>
+                <p>His deductions are sharp, subtle, and effective.</p>
+              </div>
+            </div>
+
+            <!-- Classics Club -->
+            <div class="feature">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                  <path d="M4 4h16v2H4zm0 4h10v2H4zm0 4h10v2H4zm0 4h16v2H4zm0 4h16v2H4z"/>
+                </svg>
+              </div>
+              <div class="feature-content">
+                <h4>Classics Club</h4>
+                <p>Where his journey of mystery-solving began.</p>
+              </div>
+            </div>
+
+            <!-- Personal Growth -->
+            <div class="feature">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                  <path d="M12 2a7 7 0 017 7c0 3.86-3.14 7-7 7s-7-3.14-7-7a7 7 0 017-7zm0 10a3 3 0 100-6 3 3 0 000 6zm0 2c2.67 0 8 1.34 8 4v2H4v-2c0-2.66 5.33-4 8-4z"/>
+                </svg>
+              </div>
+              <div class="feature-content">
+                <h4>Personal Growth</h4>
+                <p>He evolves from isolation to introspection.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section id="media" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Media Gallery</h2>
+        <p class="section-subtitle">Capturing the essence of Oreki's world</p>
+      </div>
+
+      <div class="media-tabs">
+        <button class="tab-btn active" data-tab="gallery">Gallery</button>
+        <button class="tab-btn" data-tab="quotes">Quotes</button>
+        <button class="tab-btn" data-tab="screenshots">Screenshots</button>
+      </div>
+
+      <div class="media-content">
+        <div class="tab-content active" id="gallery">
+          <div class="image-grid">
+            <div class="media-item">
+              <img src="images/assets/Contemplative Oreki.jpg" alt="Oreki Portrait" loading="lazy">
+              <div class="media-overlay">
+                <div class="media-info">
+                  <h4>Contemplative Oreki</h4>
+                  <p>The energy-conserving detective in thought</p>
+                </div>
+              </div>
+            </div>
+            <div class="media-item">
+              <img src="images/assets/Classics Club Room.webp" alt="Classics Club Room" loading="lazy">
+              <div class="media-overlay">
+                <div class="media-info">
+                  <h4>Classics Club Room</h4>
+                  <p>Where mysteries unfold</p>
+                </div>
+              </div>
+            </div>
+            <div class="media-item">
+              <img src="images/assets/Oreki & Chitanda.jpg" alt="Oreki and Chitanda" loading="lazy">
+              <div class="media-overlay">
+                <div class="media-info">
+                  <h4>Oreki & Chitanda</h4>
+                  <p>Curiosity meets logic</p>
+                </div>
+              </div>
+            </div>
+            <div class="media-item">
+              <img src="images/assets/Kanya Festival.png" alt="School Festival" loading="lazy">
+              <div class="media-overlay">
+                <div class="media-info">
+                  <h4>Kanya Festival</h4>
+                  <p>A pivotal moment in the series</p>
+                </div>
+              </div>
+            </div>
+            <div class="media-item">
+              <img src="images/assets/The Detective Mind.jpeg" alt="Serious Oreki" loading="lazy">
+              <div class="media-overlay">
+                <div class="media-info">
+                  <h4>The Detective Mind</h4>
+                  <p>When Oreki gets serious about solving mysteries</p>
+                </div>
+              </div>
+            </div>
+            <div class="media-item">
+              <img src="images/assets/Library Investigation.webp" alt="Library Investigation" loading="lazy">
+              <div class="media-overlay">
+                <div class="media-info">
+                  <h4>Library Investigation</h4>
+                  <p>Research and deduction in action</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="quotes">
+          <div class="quotes-grid">
+            <div class="quote-card">
+              <blockquote>
+                "I don't do anything I don't have to. What I have to do, I do quickly."
+              </blockquote>
+              <cite>— Houtarou Oreki</cite>
+              <div class="quote-context">His philosophy of energy conservation</div>
+            </div>
+            <div class="quote-card">
+              <blockquote>
+                "If I don't have to do it, I won't. If I have to do it, I'll make it quick."
+              </blockquote>
+              <cite>— Houtarou Oreki</cite>
+              <div class="quote-context">Alternative translation of his motto</div>
+            </div>
+            <div class="quote-card">
+              <blockquote>"I'm curious!"</blockquote>
+              <cite>— Eru Chitanda</cite>
+              <div class="quote-context">The phrase that always gets Oreki involved</div>
+            </div>
+            <div class="quote-card">
+              <blockquote>"The culprit is among us."</blockquote>
+              <cite>— Houtarou Oreki</cite>
+              <div class="quote-context">Classic detective moment</div>
+            </div>
+            <div class="quote-card">
+              <blockquote>
+                "A detective story without a detective is just a mystery."
+              </blockquote>
+              <cite>— Houtarou Oreki</cite>
+              <div class="quote-context">On the nature of mysteries</div>
+            </div>
+            <div class="quote-card">
+              <blockquote>"I suppose I have no choice but to be curious."</blockquote>
+              <cite>— Houtarou Oreki</cite>
+              <div class="quote-context">When Chitanda's curiosity becomes contagious</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="screenshots">
+          <div class="screenshots-grid">
+            <div class="screenshot-item">
+              <img src="screenshots/Screenshot1.png" alt="Oreki deduction scene" loading="lazy">
+              <div class="screenshot-info">
+                <h4>Episode 1 - "The Resurrection of the Ancient Library"</h4>
+                <p>Oreki's first case with the Classics Club</p>
+              </div>
+            </div>
+            <div class="screenshot-item">
+              <img src="screenshots/Screenshot2.png" alt="Club room discussion" loading="lazy">
+              <div class="screenshot-info">
+                <h4>Episode 5 - "The Truth of the Historic Classic Literature Club"</h4>
+                <p>Uncovering the club's hidden past</p>
+              </div>
+            </div>
+            <div class="screenshot-item">
+              <img src="screenshots/Screenshot3.png" alt="Festival preparation" loading="lazy">
+              <div class="screenshot-info">
+                <h4>Episode 19 - "Anyone Who Knows"</h4>
+                <p>The Kanya Festival anthology mystery</p>
+              </div>
+            </div>
+            <div class="screenshot-item">
+              <img src="screenshots/Screenshot4.png" alt="Oreki and Satoshi" loading="lazy">
+              <div class="screenshot-info">
+                <h4>Episode 22 - "The Hina Doll that Took a Detour"</h4>
+                <p>Final episode's emotional climax</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="watch" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Watch Hyouka</h2>
+        <p class="section-subtitle">Discover the quiet brilliance of Houtarou Oreki</p>
+      </div>
+      <div class="watch-content">
+        <div class="video-container">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/I_-87ba4C_g"
+              frameborder="0"
+              allowfullscreen
+              title="Hyouka Trailer">
+            </iframe>
+          </div>
+        </div>
+        <div class="watch-info">
+          <h3>Where to Watch</h3>
+          <div class="platform-links">
+            <a href="https://www.crunchyroll.com" target="_blank" class="platform-btn" rel="noopener">
+              <svg class="platform-icon-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+              <linearGradient id="YHJZfpKdg9XY8JbugrZUca_sGxCEkuQ0MGf_gr1" x1="13.998" x2="32.889" y1="43.324" y2="10.604" gradientTransform="matrix(1 0 0 -1 0 50)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ec8601"></stop><stop offset=".592" stop-color="#e77101"></stop><stop offset=".771" stop-color="#e46401"></stop><stop offset=".941" stop-color="#e36001"></stop></linearGradient><path fill="url(#YHJZfpKdg9XY8JbugrZUca_sGxCEkuQ0MGf_gr1)" d="M8,26c0-9.941,8.059-18,18-18c9.604,0,17.428,7.527,17.95,17c0.017-0.333,0.05-0.662,0.05-1 c0-11.046-8.954-20-20-20S4,12.954,4,24s8.954,20,20,20c0.338,0,0.667-0.034,1-0.05C15.527,43.428,8,35.604,8,26z"></path><g><linearGradient id="YHJZfpKdg9XY8JbugrZUcb_sGxCEkuQ0MGf_gr2" x1="19.698" x2="34.577" y1="35.677" y2="9.905" gradientTransform="matrix(1 0 0 -1 0 50)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ec8601"></stop><stop offset=".592" stop-color="#e77101"></stop><stop offset=".771" stop-color="#e46401"></stop><stop offset=".941" stop-color="#e36001"></stop></linearGradient><path fill="url(#YHJZfpKdg9XY8JbugrZUcb_sGxCEkuQ0MGf_gr2)" d="M36,27c-3.866,0-7-3.134-7-7c0-3.032,1.932-5.607,4.629-6.579 C31.765,12.518,29.694,12,27.5,12C19.492,12,13,18.716,13,27s6.492,15,14.5,15S42,35.284,42,27c0-1.015-0.1-2.006-0.286-2.965 C40.446,25.827,38.362,27,36,27z"></path></g>
+              </svg>
+              Crunchyroll
+            </a>
+            <a href="https://www.funimation.com" target="_blank" class="platform-btn" rel="noopener">
+              <svg class="platform-icon-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+              <path fill="#6a1b9a" d="M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20S35,4,24,4z"></path><path fill="#fff" d="M15.974,30c0,3.314,3.582,6,8,6s8-2.686,8-6H15.974z"></path>
+              </svg>
+              Funimation
+            </a>
+            <a href="https://youtube.com/playlist?list=PLwLSw1_eDZl28iypqyY3tsSz7P1BByLiK" target="_blank" class="platform-btn" rel="noopener">
+              <svg class="platform-icon-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+              <path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+              </svg>
+              YouTube
+            </a>
+          </div>
+          <div class="anime-info">
+            <div class="info-item"><strong>Studio:</strong> Kyoto Animation</div>
+            <div class="info-item"><strong>Episodes:</strong> 22 + OVA</div>
+            <div class="info-item"><strong>Genre:</strong> Mystery, Slice of Life, School</div>
+            <div class="info-item"><strong>Year:</strong> 2012</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="images/Hyouka_logo.svg.png" alt="Hyouka Logo" class="footer-logo-img">
+          </div>
+          <p>A minimalist tribute to one of anime's most unique minds.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#watch">Watch</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="https://myanimelist.net/character/55131/Houtarou_Oreki" target="_blank">MAL Profile</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Hyouka_(TV_series)" target="_blank">Wikipedia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Oreki Tribute Site. Fan project only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path>
+    </svg>
+  </button>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="audio/Hyouka All Openings and Endings (Full).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
