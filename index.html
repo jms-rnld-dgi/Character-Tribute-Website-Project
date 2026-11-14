@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A fan-made tribute to Houtarou Oreki from Hyouka, featuring a character profile, gallery, quotes, and video.">
+  <meta name="theme-color" content="#2c3e50">
   <title>Houtarou Oreki - Tribute</title>
   <link rel="icon" href="images/Hyouka_logo.svg.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
@@ -11,6 +13,7 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <!-- Loading Screen -->
   <div id="loading-screen" class="loading-screen">
     <div class="loader"></div>
@@ -22,28 +25,29 @@
       <a href="#home" class="logo">
         <img src="images/Hyouka_logo.svg.png" alt="Hyouka Logo" class="logo-img">
       </a>
-      <nav>
+      <nav aria-label="Primary navigation">
         <ul class="nav-links">
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#media" class="nav-link">Media</a></li>
           <li><a href="#watch" class="nav-link">Watch</a></li>
-          <li><button id="theme-toggle" class="icon-btn" title="Toggle Theme"><span id="theme-icon" class="material-symbols-outlined">dark_mode</span></button></li>
-          <li><button id="music-toggle" class="icon-btn" title="Toggle Music"><span id="music-icon" class="material-symbols-outlined">volume_up</span></button></li>
+          <li><button id="theme-toggle" class="icon-btn" type="button" title="Toggle Theme" aria-label="Toggle color theme"><span id="theme-icon" class="material-symbols-outlined">dark_mode</span></button></li>
+          <li><button id="music-toggle" class="icon-btn" type="button" title="Toggle Music" aria-label="Toggle background music"><span id="music-icon" class="material-symbols-outlined">volume_up</span></button></li>
         </ul>
       </nav>
-      <button id="mobile-menu-btn" class="mobile-menu-btn"><span></span><span></span><span></span></button>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
-    <div id="mobile-menu" class="mobile-menu">
+    <div id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
       <a href="#home" class="mobile-nav-link">Home</a>
       <a href="#about" class="mobile-nav-link">About</a>
       <a href="#media" class="mobile-nav-link">Media</a>
       <a href="#watch" class="mobile-nav-link">Watch</a>
-      <button id="theme-toggle-mobile" class="icon-btn" title="Toggle Theme"><span id="theme-icon-mobile" class="material-symbols-outlined">dark_mode</span></button>
-      <button id="music-toggle-mobile" class="icon-btn" title="Toggle Music"><span id="music-icon-mobile" class="material-symbols-outlined">volume_up</span></button>
+      <button id="theme-toggle-mobile" class="icon-btn" type="button" title="Toggle Theme" aria-label="Toggle color theme"><span id="theme-icon-mobile" class="material-symbols-outlined">dark_mode</span></button>
+      <button id="music-toggle-mobile" class="icon-btn" type="button" title="Toggle Music" aria-label="Toggle background music"><span id="music-icon-mobile" class="material-symbols-outlined">volume_up</span></button>
     </div>
   </header>
 
+  <main id="main-content" tabindex="-1">
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-background" style="background-image: url('images/hero.png')">
@@ -83,7 +87,7 @@
             Your browser does not support the video tag.
           </video>
         </div>
-        <div class="vi-content">
+        <div class="about-content">
           <h3>The Lazy Detective</h3>
           <p class="about-text">
             Houtarou Oreki is a quiet, highly intelligent student at Kamiyama High School. 
@@ -301,6 +305,9 @@
             <iframe
               src="https://www.youtube.com/embed/I_-87ba4C_g"
               frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              loading="lazy"
               allowfullscreen
               title="Hyouka Trailer">
             </iframe>
@@ -339,6 +346,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -367,13 +376,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Oreki Tribute Site. Fan project only.</p>
+        <p>&copy; 2026 Oreki Tribute Site. Fan project only.</p>
       </div>
     </div>
   </footer>
 
   <!-- Back to Top -->
-  <button id="back-to-top" class="back-to-top" title="Back to top">
+  <button id="back-to-top" class="back-to-top" type="button" title="Back to top" aria-label="Back to top">
     <svg viewBox="0 0 24 24" fill="currentColor">
       <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path>
     </svg>
