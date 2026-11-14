@@ -21,7 +21,12 @@ const tabContents = document.querySelectorAll('.tab-content');
 
 let isMenuOpen = false;
 let isMusicPlaying = false;
-let currentTheme = localStorage.getItem('theme') || 'light';
+let currentTheme = 'light';
+try {
+  currentTheme = localStorage.getItem('theme') || 'light';
+} catch (error) {
+  console.warn('Theme preference storage is unavailable:', error);
+}
 
 // === Init ===
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,7 +42,11 @@ function initApp() {
   addImageFadeIn();
   addRippleEffect();
   addParallax();
-  if (bgMusic) bgMusic.volume = 0.050; // Set volume to mid
+  if (bgMusic) {
+    bgMusic.volume = 0.05; // Keep optional background music subtle
+    bgMusic.addEventListener('play', () => updateMusicState(true));
+    bgMusic.addEventListener('pause', () => updateMusicState(false));
+  }
 }
 
 function setupListeners() {
@@ -73,16 +82,32 @@ function applyTheme(theme, init = false) {
 
 function toggleMusic() {
   if (!bgMusic) return;
-  isMusicPlaying ? bgMusic.pause() : bgMusic.play().catch(console.warn);
-  const icon = isMusicPlaying ? 'volume_off' : 'volume_up';
+  if (isMusicPlaying) {
+    bgMusic.pause();
+    return;
+  }
+
+  bgMusic.play()
+    .then(() => updateMusicState(true))
+    .catch(error => {
+      updateMusicState(false);
+      console.warn('Background music could not be played:', error);
+    });
+}
+
+function updateMusicState(playing) {
+  isMusicPlaying = playing;
+  const icon = playing ? 'volume_off' : 'volume_up';
   if (musicIcon) musicIcon.textContent = icon;
   if (musicIconMobile) musicIconMobile.textContent = icon;
-  isMusicPlaying = !isMusicPlaying;
+  musicToggle?.setAttribute('aria-pressed', String(playing));
+  musicToggleMobile?.setAttribute('aria-pressed', String(playing));
 }
 
 function toggleMobileMenu() {
   isMenuOpen = !isMenuOpen;
   mobileMenu?.classList.toggle('active', isMenuOpen);
+  mobileMenuBtn?.setAttribute('aria-expanded', String(isMenuOpen));
   const spans = mobileMenuBtn?.querySelectorAll('span');
   if (!spans) return;
   if (isMenuOpen) {
@@ -203,10 +228,13 @@ function addImageFadeIn() {
     img.style.opacity = '0';
     img.style.filter = 'blur(10px)';
     img.style.transition = 'opacity 0.5s ease, filter 0.5s ease';
-    img.addEventListener('load', () => {
+    const revealImage = () => {
       img.style.opacity = '1';
       img.style.filter = 'blur(0)';
-    });
+    };
+    img.addEventListener('load', revealImage, { once: true });
+    img.addEventListener('error', revealImage, { once: true });
+    if (img.complete) revealImage();
   });
 }
 
